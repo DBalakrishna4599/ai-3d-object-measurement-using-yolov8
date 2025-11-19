@@ -5,9 +5,9 @@ name: Python CI
 # It will run on every push to the 'main' branch and on every pull request.
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # This section defines the jobs to be run.
 jobs:
