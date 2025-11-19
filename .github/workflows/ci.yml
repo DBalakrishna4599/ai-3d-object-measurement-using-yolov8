@@ -1,0 +1,44 @@
+# A friendly name for your workflow, which will be displayed on GitHub
+name: Python CI
+
+# This section defines the trigger for the workflow.
+# It will run on every push to the 'main' branch and on every pull request.
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# This section defines the jobs to be run.
+jobs:
+  # We'll define a single job called 'build'
+  build:
+    # The type of virtual machine to run the job on. 'ubuntu-latest' is standard and free.
+    runs-on: ubuntu-latest
+
+    # The sequence of steps that make up the job
+    steps:
+      # Step 1: Check out your repository code so the workflow can access it
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up a Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # You can specify a Python version
+
+      # Step 3: Install your project's dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8  # Install the linter
+          pip install -r requirements.txt
+
+      # Step 4: Run the linter to check for code quality
+      - name: Lint with flake8
+        run: |
+          # Stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
