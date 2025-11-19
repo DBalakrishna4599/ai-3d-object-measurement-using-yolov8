@@ -1,0 +1,12 @@
+# Virtual Environment
+venv/
+
+# YOLOv8 Model File
+yolov8m.pt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Mac system files
+.DS_Store
