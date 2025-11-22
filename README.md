@@ -26,7 +26,6 @@ Follow these steps to set up and run the project on your computer.
 Open your terminal or command prompt and run the following commands:
 
 ```
-
 git clone https://github.com/DBalakrishna4599/ai-3d-object-measurement-using-yolov8.git
 ```
 ```
@@ -41,7 +40,6 @@ Create the environment:
 
 ```
 python3 -m venv venv
-
 ```
 
 Activate the environment:
@@ -64,7 +62,6 @@ Install all the required Python packages from the `requirements.txt` file.
 
 ```
 pip install -r requirements.txt
-
 ```
 
 
@@ -84,5 +81,6 @@ The first time you run the application, it will automatically download the `yolo
     ```
 3.  Your web browser will open with the application running at a local address (e.g., `http://localhost:8501`).
 4.  Follow the instructions in the app's sidebar to connect to your local webcam or enter the address of your local IP camera.
+
 
 
