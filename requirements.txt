@@ -6,4 +6,3 @@ requests
 ultralytics
 torch
 torchvision
-pyngrok
