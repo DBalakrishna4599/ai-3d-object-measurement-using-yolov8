@@ -2,7 +2,7 @@
 
 This project provides a powerful tool for performing 3D measurements of objects using a standard webcam or a local IP camera. The application runs on your local machine, allowing it to directly connect to cameras on your private network.
 
-## ✨ Features
+## ✨ Features :
 
 - **Local Execution:** Runs securely on your own machine, ensuring access to local network devices.
 - **AI-Powered Detection:** Utilizes the YOLOv8 model for fast and accurate object detection.
@@ -81,6 +81,7 @@ The first time you run the application, it will automatically download the `yolo
     ```
 3.  Your web browser will open with the application running at a local address (e.g., `http://localhost:8501`).
 4.  Follow the instructions in the app's sidebar to connect to your local webcam or enter the address of your local IP camera.
+
 
 
 
